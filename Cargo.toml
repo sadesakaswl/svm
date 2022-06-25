@@ -1,0 +1,17 @@
+[package]
+author = "sadesakaswl"
+edition = "2021"
+name = "svm"
+version = "0.1.0"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+rayon = "1.5.2"
+serde = {version = "1.0.137", features = ["derive"]}
+
+[profile.release]
+codegen-units = 1
+lto = true
+opt-level = 3
+strip = true
